@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 80%;
+    max-width: 960px;
+}
+
+
+.form-group {
+    margin: 10px;
+    padding: 10px;
+}
+
+.jumbotron {
+    color: white;
+    font-size: 4em;
+    background-color:#3C32A0;
+    width: 80%;
+    max-width: 960px;
+    border: 2px solid #3C32A0;
+    border-radius: 10px;
+    margin: 0px auto; 
+    margin-bottom: 20px; 
+}
+
+.card-header {
+    color:white;
+    font-size: 1.5em;
+    background-color:#3C32A0;
+    padding: 5px;
+}
+
+.labeltext {
+   color:#3C32A0;
+}
+
+.card {
+    margin-bottom: 20px; 
+}
