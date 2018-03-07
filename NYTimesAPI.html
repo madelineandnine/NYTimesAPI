@@ -21,7 +21,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-               <p> <i class="far fa-list-alt"></i> Search Parameters </p>
+               <p class="box-header"> <i class="far fa-list-alt"></i> Search Parameters </p>
             </div>
             <form>
                 <div class="form-group">
@@ -34,51 +34,25 @@
                     <label for="endyear" class="labeltext">End Year (Optional):</label>
                     <input type="number" class="form-control" id="endyear" aria-describedby="endyear" placeholder="2000">
                 </div>
-                <button type="submit" id = "submit" class="btn btn-primary">Search</button>
+                <div id = "buttons">
+                <button type="submit" id = "submit" class="btn"><i class="fas fa-search"></i>
+
+                     Search</button>
+                <button type="clear" id = "clear" class="btn"><i class="far fa-trash-alt"></i>
+
+                     Clear Results</button>
+                    </div>
             </form>
         </div>
 
         <div class="card">
                 <div class="card-header">
-                     <p>  <i class="fas fa-list-ul"></i> Top Articles </p>
+                     <p class="box-header">  <i class="fas fa-list-ul"></i> Top Articles </p>
                  </div>
                  <div id="top-articles">x</div>
                     </div>
     </div>
-    <script>
-        $(document).ready() {
-
-           var submit = $("#submit"); 
-           var searchTerm = $("#searchterm"); 
-           var records = $("#records"); 
-           var startYear = $("#startyear"); 
-           var endYear = $("#endyear")
-
-        $(submit).on("click", function() {
-
-
-
-
-
-
-        }
-
-        
-
-        
-
-
-
-
-
-
-
-
-
-
-
-        }); 
-    </script>
+   
 </body>
 
 </html>
