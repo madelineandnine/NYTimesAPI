@@ -1,25 +1,35 @@
 
 
-var who = $('#searchterm').val();
-var pageNum = $('#records').val();
-var startYear = $('#startyear').val();
-var endYear = $('#endyear').val();
-
-var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+who+"&page=+"+pageNum+"&begin-date="+startYear+"end-date="+endYear+"&api-key=4008f2ed5e7246f48b62e64357046e32";
+var who;
+var pages;
+var pageNum;
+var startYear;
+var endYear;
+var queryURL;
 
 $('#subbutt').on('click', function (event) {
     who = $('#searchterm').val();
-    pageNum = $('#records').val();
+    pages = $('#records').val()
+    pageNum = parseInt(pages);
     startYear = $('#startyear').val();
     endYear = $('#endyear').val();
-    queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+who+"&page=+"+pageNum+"&begin-date="+startYear+"end-date="+endYear+"&api-key=4008f2ed5e7246f48b62e64357046e32";
-    console.log(who);
-    console.log('meow');
+    queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+who+"&page="+pages+"&begin_date="+startYear+"0101&end_date="+endYear+"1231&api-key=4008f2ed5e7246f48b62e64357046e32";
+
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function(response) {
-        console.log(response);
+        $('#top-articles').empty();
+        for (var i = 0; i < pageNum; i++) {
+            console.log(response.response.docs[i].headline.main);
+            $('#top-articles')
+                .append($('<a>')
+                    .text(response.response.docs[i].headline.main)
+                    .attr("href", response.response.docs[i].web_url)
+                    .attr("target", "_blank")
+                    .addClass("articles"))   // for styling
+                .append($('<br>'));
+        }
     });
 
     event.preventDefault();

@@ -1,0 +1,65 @@
+body {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-weight: 700; 
+    text-align: center; 
+    font-size: 1em; 
+}
+.container {
+    width: 80%;
+    max-width: 960px;
+}
+
+.form-group {
+    margin: 10px;
+    padding: 10px;
+}
+
+.jumbotron {
+    color: white;
+    font-size: 4em;
+    background-color:#3B5998;
+    width: 80%;
+    max-width: 960px;
+    border: 2px solid #3B5998;
+    border-radius: 10px;
+    margin: 0px auto; 
+    margin-bottom: 20px; 
+}
+
+.card-header {
+    color:white;
+    font-size: 1.5em;
+    background-color:#3B5998;
+    padding: 5px;
+}
+
+.labeltext {
+   color:#3B5998;
+}
+
+.card {
+    margin-bottom: 20px; 
+}
+
+.btn {
+    background-color: lightslategray; 
+    text-align: center; 
+    color: white; 
+    border-radius: 10px;
+
+}
+
+#buttons {
+    margin-left: 20px; 
+    margin-bottom: 20px; 
+}
+
+.box-header {
+    margin-left: 20px; 
+    margin-top: 15px; 
+
+}
